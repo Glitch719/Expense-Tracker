@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Expense List</title>
+</head>
+<body>
+    <h1>Expenses</h1>
+    <ul>
+        {% for expense in expenses %}
+            <li>{{ expense.description }}: ${{ expense.amount }} ({{ expense.date }})</li>
+        {% empty %}
+            <li>No expenses recorded yet.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
